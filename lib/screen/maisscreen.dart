@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_volei_sco/_comum/minhas_cores.dart';
+import 'package:flutter_volei_sco/servicos/autenticacao_servico.dart';
 
 // Adicionar Bottom Sheet no botão de Redes Sociais
 // Adicionar Bottom sheet no botão da escolha do tema do app;
@@ -16,18 +17,24 @@ class _MaisScreenState extends State<MaisScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Mais', 
-        style: (TextStyle(color: MinhasCores.branco)
-        ),
+        title: const Text(
+          'Mais',
+          style: (TextStyle(color: MinhasCores.branco)),
         ),
         backgroundColor: MinhasCores.azulMarinho,
       ),
       backgroundColor: MinhasCores.azulMaisEscuro,
       body: Column(
         children: [
-        ElevatedButton(
-          onPressed: (){},
-          child: const Text('Ajustes'),
+          ElevatedButton(
+            onPressed: () {},
+            child: const Text('Ajustes'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              AutenticacaoServico().deslogar();
+            },
+            child: const Text("Deslogar"),
           ),
         ],
       ),

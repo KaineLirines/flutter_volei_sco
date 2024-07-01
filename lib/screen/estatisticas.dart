@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_volei_sco/_comum/button.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_volei_sco/_comum/minhas_cores.dart';
 import 'package:flutter_volei_sco/modelos/dados_jogadores.dart';
+import 'package:flutter_volei_sco/modelos/Player.dart';
 
 class Estatisticas extends StatefulWidget {
   const Estatisticas({super.key});
@@ -12,47 +14,25 @@ class Estatisticas extends StatefulWidget {
 
 class _EstatisticasState extends State<Estatisticas> {
   
-  // final DatabaseHelper dbHelper = DatabaseHelper();
+  final FirebaseFirestore firestore = FirebaseFirestore.instance;
   final TextEditingController nameController = TextEditingController();
   final TextEditingController scoreController = TextEditingController();
 
-  void adicionarJogador() {
-    setState(() {
-      for (int id = 0; id >= 0; id++) {
-        id++;
-      }
+  Future<void> addPlayer(String name, int score) {
+    return firestore.collection('players').add({
+      'name': name,
+      'score': score,
     });
-    setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MinhasCores.azulMaisEscuro,
+      backgroundColor: MinhasCores.branco,
       appBar: AppBar(
         title: const Text("Estatíticas"),
       ),
-      body: Column(
-        children: [
-          
-          ElevatedButton.icon(
-            onPressed: () {
-              adicionarJogador();
-            },
-            style: buttonStatistics,
-            icon: const Icon(Icons.add),
-            label: const Text("Adicionar jogador"),
-          ),
-          Row(
-            children: [
-              const SizedBox(
-                width: 10,
-              ),
-              Text("Jogador"),
-            ],
-          ),
-        ],
-      ),
+       
     );
   }
 }

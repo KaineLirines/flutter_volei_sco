@@ -113,9 +113,7 @@ class _PlacarState extends State<Placar> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MinhasCores.verdeTurquesa,
-      body: SingleChildScrollView(
-        child: Center(
-          child: Row(
+      body: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -212,8 +210,7 @@ class _PlacarState extends State<Placar> {
               ),
             ],
           ),
-        ),
-      ),
+        
     );
   }
 }
