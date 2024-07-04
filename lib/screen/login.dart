@@ -22,11 +22,11 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   bool queroEntrar = true;
   final _formKey = GlobalKey<FormState>();
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _senhaController = TextEditingController();
-  TextEditingController _nomeController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _senhaController = TextEditingController();
+  final TextEditingController _nomeController = TextEditingController();
 
-  AutenticacaoServico _autenServico = AutenticacaoServico();
+  final AutenticacaoServico _autenServico = AutenticacaoServico();
 
   @override
   Widget build(BuildContext context) {
@@ -142,7 +142,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                     child: Text(
                       (queroEntrar) ? "Entrar" : "Cadastrar",
-                      style: TextStyle(color: MinhasCores.branco),
+                      style: const TextStyle(color: MinhasCores.branco),
                     ),
                   ),
                   const Divider(),
@@ -156,7 +156,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       (queroEntrar)
                           ? "Ainda não tem uma conta ? Cadastre-se"
                           : "Já tem uma conta? Entre!",
-                      style: TextStyle(color: MinhasCores.azulMaisEscuro),
+                      style: const TextStyle(color: MinhasCores.azulMaisEscuro),
                     ),
                   ),
                 ],

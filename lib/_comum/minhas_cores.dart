@@ -15,4 +15,15 @@ class MinhasCores{
 
   static const Color azulMaisEscuro = Color(0xFF02091C);
 
+  static const Color azulColor = Color(0xFF66D2F3);
+
+  static const Color amarelo = Color(0xFFFAF493);
+
+  static const Color vermelho = Color(0xFFFCE9E9);
+
+  static const Color vermelhoForte = Color(0xFFFF5757);
+
+  static const Color azulCiano = Color(0xFFE8F7FC);
+
+
 }

@@ -27,8 +27,25 @@ class _MaisScreenState extends State<MaisScreen> {
       body: Column(
         children: [
           ElevatedButton(
-            onPressed: () {},
             child: const Text('Ajustes'),
+            onPressed: () {
+              showModalBottomSheet(
+                context: context,
+                builder: (BuildContext context) {
+                  return SizedBox(
+                    height: 400,
+                    child: Center(
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child: const Text("Close"),
+                      ),
+                    ),
+                  );
+                },
+              );
+            },
           ),
           ElevatedButton(
             onPressed: () {

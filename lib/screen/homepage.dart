@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_volei_sco/_comum/minhas_cores.dart';
-import 'package:flutter_volei_sco/screen/estatisticas.dart';
 import 'package:flutter_volei_sco/screen/homescreen.dart';
 import 'package:flutter_volei_sco/screen/maisscreen.dart';
 import 'package:flutter_volei_sco/screen/noticias.dart';
-import 'package:flutter_volei_sco/screen/placar.dart';
-import 'placar.dart';
-import 'estatisticas.dart';
-import 'times.dart';
 
 // Mordenizar BottomNavigation;
 
@@ -40,27 +35,29 @@ class _Homepage extends State<Homepage> {
       backgroundColor: MinhasCores.branco,
       body: PageView(
         controller: pc,
-        children: [
-          const HomeScreen(),
-          const NoticiasPage(),
-          const MaisScreen(),
-        ],
         onPageChanged: setPaginaAtual,
+        children: const [
+          HomeScreen(),
+          NoticiasPage(),
+          MaisScreen(),
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-          currentIndex: paginaAtual,
-          items: [
-            const BottomNavigationBarItem(
-                icon: Icon(Icons.home), label: 'Home'),
-            const BottomNavigationBarItem(
-                icon: Icon(Icons.chrome_reader_mode), label: 'Notícias'),
-            const BottomNavigationBarItem(
-                icon: Icon(Icons.list), label: 'Mais'),
-          ],
-          onTap: (pagina) {
-            pc.animateToPage(pagina,
-                duration: Duration(milliseconds: 400), curve: Curves.ease);
-          }),
+        backgroundColor: MinhasCores.azulMarinho,
+        selectedItemColor: MinhasCores.branco,
+        unselectedItemColor: MinhasCores.branco,
+        currentIndex: paginaAtual,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.chrome_reader_mode), label: 'Notícias'),
+          BottomNavigationBarItem(icon: Icon(Icons.list), label: 'Mais'),
+        ],
+        onTap: (pagina) {
+          pc.animateToPage(pagina,
+              duration: const Duration(milliseconds: 400), curve: Curves.ease);
+        },
+      ),
     );
   }
 }
