@@ -7,6 +7,24 @@ VoleiSco
 FUNCIONALIDADE DE LOGIN:
 ![image](https://github.com/KaineLirines/flutter_volei_sco/assets/123604583/20c40817-9215-4fe0-8b6a-a96f8e12b1ca)
 
+HOMESCREEN:
+![image](https://github.com/KaineLirines/flutter_volei_sco/assets/123604583/686a0820-696f-4b03-b275-b298cad928f2)
+
+PLACAR:
+![image](https://github.com/KaineLirines/flutter_volei_sco/assets/123604583/2d7d2d40-802c-48f6-b91e-6d43674a7129)
+
+GERADOR DE TIMES:
+![image](https://github.com/KaineLirines/flutter_volei_sco/assets/123604583/43c25aa6-9590-46d7-a5f1-874b6bd41fa4)
+
+TELA NOTÍCIAS:
+![image](https://github.com/KaineLirines/flutter_volei_sco/assets/123604583/8d0e4afb-f2e5-495f-8cf2-2fe52b8de9bd)
+
+MAIS:
+![image](https://github.com/KaineLirines/flutter_volei_sco/assets/123604583/d15a68a3-63af-4573-9d32-161ca50fe75c)
+
+
+
+
 
 Dependêcias utilizadas:
 - cupertino_icons: ^1.0.6
