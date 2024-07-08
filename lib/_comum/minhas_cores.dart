@@ -4,6 +4,8 @@ class MinhasCores{
   static const Color branco = Color(0xFFF2F2F2);
   
   static const Color azulMarinho = Color(0xFF010717);
+
+  static const Color azulMarinhoClaro = Color(0xFF020e2f);
   
   static const Color verdeTurquesa = Color(0xFF089680);
 
