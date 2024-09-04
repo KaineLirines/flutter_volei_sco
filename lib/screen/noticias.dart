@@ -22,9 +22,9 @@ class _NoticiasPageState extends State<NoticiasPage> {
     NewsApi newsApi = NewsApi();
     await newsApi.getNews();
     articles = newsApi.dataStore;
-    setState(() {
-      isLoadin = false;
-    });
+    // setState(() {
+    //   isLoadin = false;
+    // });
   }
 
   @override
